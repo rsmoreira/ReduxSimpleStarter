@@ -1,6 +1,6 @@
 # ReduxSimpleStarter
 ```
-This is a copy of Stephen Grider's Repository named ReduxSimpleStarter, on github. 
+This project have been started with a copy of Stephen Grider's Repository named ReduxSimpleStarter, on github (https://github.com/StephenGrider/ReduxSimpleStarter), then, according with its lectures in the course Modern React with Redux, this project got bigger. 
 
 Thank you Stephen Grider.
 ```
