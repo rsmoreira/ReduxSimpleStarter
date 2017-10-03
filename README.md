@@ -1,6 +1,6 @@
 # ReduxSimpleStarter
 ```
-It is a copy of Stephen Grider's Repository named ReduxSimpleStarter, on github. 
+This is a copy of Stephen Grider's Repository named ReduxSimpleStarter, on github. 
 
 Thank you Stephen Grider.
 ```
