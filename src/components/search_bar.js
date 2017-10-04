@@ -4,9 +4,10 @@ import React, { Component } from 'react'; // ', { Component }' - it avoids you w
 
 class SearchBar extends Component {
     render() {
-        return <input />;
+        return <input onChange={ event => console.log(event.target.value) } />;
 
     }
+
 }
 
 
