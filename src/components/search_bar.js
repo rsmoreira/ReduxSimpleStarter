@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; // ', { Component }' - it avoids you writing 'extends React.Component', so you just need to write 'extends Component'
 
-// ES6 - React Class-Based component
+// ES6 - Class-Based component
 // Only Class-Based components have state
 
 class SearchBar extends Component {
@@ -12,7 +12,9 @@ class SearchBar extends Component {
     render() {
         return (
             <div>
-                <input onChange={event => this.setState({ term: event.target.value })} />
+                <input 
+                    value = {this.state.term}
+                    onChange={event => this.setState({ term: event.target.value })} />
             </div> 
         );
     }
