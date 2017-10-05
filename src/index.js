@@ -1,31 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
-
 import SearcBar from './components/search_bar';
 
-// https://console.developers.google.com/apis/credentials
-// npm install --save youtube-api-search
 const API_KEY = 'AIzaSyBEoJMJHY_EvNt3l09kM4bKIlq-TR4WuL8';
 
-YTSearch({key:API_KEY, term: 'surfboards'}, function(data) {
-    console.log(data);
-});
 
+class App extends Component {
+    constructor(props) {
+        super(props);
 
+        this.state = { videos: [] };
 
-// Create a new Component.  
-// This Component should produce some HTML
-// https://jsx.github.io/
-const App = () => {
-    return (
-        <div>
-            <SearcBar />
-        </div>
-    );
+        YTSearch({key:API_KEY, term: 'surfboards'}, data => {
+            this.setState({ videos: data });
+            
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <SearcBar />
+            </div>
+        );
+    }
 }
-
-
-// Take this Component generated HTML and put it on the page (in the DOM)]
 
 ReactDOM.render(<App />, document.querySelector('.container'));
